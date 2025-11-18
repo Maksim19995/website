@@ -1,0 +1,361 @@
+@font-face {
+  font-family: 'Space Grotesk-Regular';
+  src: url('fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Space Grotesk-Bold';
+  src: url('fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face{
+  font-family: 'SpaceGrotesk-Light';
+  src: url('fonts/SpaceGrotesk-Light.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family:'SpaceGrotesk-Medium' ;
+  src: url('fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family:'SpaceGrotesk-SemiBold' ;
+  src: url('fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
+} 
+/* Мобильные устройства до 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; 
+    padding: 0 5%;  
+  }
+
+  /* Header */
+  #header, nav {
+    flex-direction: column;   
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-item {
+    margin-left: 0;           
+    font-size: 1rem;
+  }
+
+  /* Skills Section */
+  .skills {
+    padding: 30px 5%;
+  }
+
+  .skills h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .skills-grid {
+    gap: 15px;
+  }
+
+  .skill-card {
+    flex: 1 1 100%;          
+    padding: 15px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-card li {
+    font-size: 0.9rem;
+  }
+
+  /* Scientist Card */
+  .card {
+    min-height: auto;        
+    padding: 20px 0;
+  }
+
+  .scientist-card {
+    max-width: 100%;          
+    padding: 15px;
+  }
+
+  .scientist-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .scientist-card p {
+    font-size: 0.9rem;
+  }
+
+
+  .About_me {
+    padding: 40px 5%;
+  }
+
+  .About_me h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .card_about_me {
+    flex-direction: column;   
+    gap: 15px;
+  }
+
+  .job-card {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .nav-item {
+    font-size: 0.9rem;
+  }
+
+  .skills h2,
+  .About_me h2 {
+    font-size: 1.3rem;
+  }
+
+  .skill-card h3,
+  .scientist-card h3 {
+    font-size: 1rem;
+  }
+}
+
+ 
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  color: white;
+}
+body {
+  background-color: rgb(6, 7, 12);
+  font-family: "Space Grotesk"; 
+  font-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 10%;
+}
+
+/* Header */
+#header, nav {
+  display: flex;
+  color: aliceblue;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1;
+}
+      /*menu_display_up */
+      .nav-item {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-left: 60px;
+        transition: color 0.12s, transform 0.12s;
+      }
+
+      nav .active {
+        color: #3FA2F6;
+      }
+
+      .nav-item:hover {
+        color: #3FA2F6;
+      }  
+
+      .nav-item:active {
+        transform: scale(1.1);
+      }
+/* Skills Section */
+.skills {
+  padding: 50px 10%;
+  background-color: rgba(6, 7, 12, 0.9);
+  color: lightgray;
+}
+
+.skills h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #3FA2F6;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.skill-card {
+  flex: 1 1 250px;
+  background-color: #111;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 50px #3FA2F6;
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #3FA2F6;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-card li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.card{
+  display: grid;
+  place-items: center; 
+  min-height: 50vh;
+}
+
+.scientist-card {
+  max-width: 300px;
+  background-color: #111;
+  color: lightgray;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scientist-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.scientist-card h3 {
+  font-size: 1.5rem;
+  color: #3FA2F6;
+  margin-bottom: 10px;
+}
+
+.scientist-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-links a {
+  font-size: 0.9rem;
+  color: #3FA2F6;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #FFB400;
+}
+
+.scientist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #3FA2F6;
+}
+.About_me {
+  padding: 60px 10%;
+  background: linear-gradient(135deg, #06070C, #111);
+  color: lightgray;
+  text-align: center;
+}
+
+.About_me h2 {
+  font-size: 2rem;
+  color: #3FA2F6;
+  margin-bottom: 40px;
+}
+
+.card_about_me {
+  display: flex;
+  flex-wrap: wrap;          
+  gap: 20px;                
+  justify-content: center;  
+}
+
+.job-card {
+  flex: auto;         
+  background-color: #111111;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(63, 162, 246, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(63, 162, 246, 0.6);
+}
+.footer{
+  display: flex;
+  align-items: center;
+  font-family: 'SpaceGrotesk-Light';
+  justify-content: space-between;
+}
+
+
+@keyframes fadeIn {
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes backgroundZoom {
+  from{
+    background-size: 80%;
+  }
+  to{
+    background-size: 100%;
+  }
+}
+
+/* Apply Animations */
+h2 {
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+p {
+  animation: fadeIn 1.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+.nav-item,
+
+body {
+  animation: backgroundZoom 3s ease-in forwards;
+}

@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'Space Grotesk-Regular';
+  src: url('fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Space Grotesk-Bold';
+  src: url('fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face{
+  font-family: 'SpaceGrotesk-Light';
+  src: url('fonts/SpaceGrotesk-Light.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family:'SpaceGrotesk-Medium' ;
+  src: url('fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family:'SpaceGrotesk-SemiBold' ;
+  src: url('fonts/SpaceGrotesk-SemiBold.ttf') format('truetype');
+} 
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* чуть крупнее для удобства чтения */
+    padding: 0 5%;   /* уменьшаем боковые отступы */
+  }
+
+  /* Header */
+  #header, nav {
+    flex-direction: column; /* меню и логотип в столбик */
+    align-items: flex-start;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-top: 10px; /* вертикальный список */
+  }
+
+  /* main_info */
+  .main_info {
+    font-size: 2rem;   /* уменьшаем заголовок */
+    max-width: 100%;   /* на мобильных пусть занимает всю ширину */
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding-bottom: 2rem; /* меньше отступ */
+    text-align: center;
+  }
+
+  /* button */
+  .button button {
+    width: 100%;       /* кнопка на всю ширину экрана */
+    margin: 20px 0;    /* убираем большие отступы */
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: 0;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+body {
+  background-color: rgb(6, 7, 12);
+  font-family: "Space Grotesk"; 
+  font-size: 12px;
+  background-image: url(background-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 10%;
+}
+
+/* Header */
+#header, nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1;
+}
+      /*menu_display_up */
+      .nav-item {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-left: 60px;
+        transition: color 0.12s, transform 0.12s;
+      }
+
+      nav .active {
+        color: #3FA2F6;
+      }
+
+      .nav-item:hover {
+        color: #3FA2F6;
+      }  
+
+      .nav-item:active {
+        transform: scale(1.1);
+      }
+/* main_info */
+  .main_info{
+    font-size: 3rem;
+    font-family: "Space Grotesk-Regular";
+    max-width: 20%;
+
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: lightgray;
+    line-height: 1.5;
+    padding-bottom: 5rem;
+  }
+
+/* button */
+.button button{
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 15px 0;
+  width: 150px;
+  border:none;
+  border-radius: 8px;
+  margin-right: 50px;
+  background-color: #3FA2F6;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  transition: background-color 0.12s, border 0.12s, color 0.21s, padding 0.12s;
+}
+
+.button button:hover {
+  box-shadow: 0 0 12px #3FA2F6;
+}
+
+/* Icons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;  
+}
+
+.social-icon{
+  padding-bottom: 50px;
+}
+
+.social-icon i {
+font-size: 1.2rem;
+color: #3FA2F6;
+border: 1px solid #3FA2F6;
+border-radius: 50px;
+padding: 8px;
+height: 25px;
+width: 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.12s, box-shadow 0.12s;
+cursor: pointer;
+}
+
+.social-icon i:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #3FA2F6;
+}
+
+/*footer*/
+footer{
+  margin-top: 10rem;
+  text-align: center;
+}
+/* Animations */
+@keyframes fadeIn {
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundZoom {
+  from{
+    background-size: 80%;
+  }
+  to{
+    background-size: 100%;
+  }
+}
+
+
+
+
+/* Apply Animations */
+h1 {
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+p {
+  animation: fadeIn 1.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+button {
+  animation: fadeIn 1.8s ease-out forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+.social-icon {
+  animation: fadeIn 2s ease-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.nav-item,
+.left-section {
+  animation: fadeInTop 1s ease-in forwards;
+  opacity: 0;
+}
+
+body {
+  animation: backgroundZoom 3s ease-in forwards;
+}
